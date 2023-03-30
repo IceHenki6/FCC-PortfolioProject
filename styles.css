@@ -139,6 +139,7 @@ a{
 }
 
 #footer{
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -153,19 +154,25 @@ a{
 
 
 
-#github, #linkedin{
+#profile-link, #linkedin{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
 }
 
-#github svg{
+#profile-link svg{
     width: 100%;
 }
 
 #linkedin svg{
     width: 100%;
+}
+
+#footer span{
+    position:absolute;
+    left: 5px;
+    bottom: 5px;
 }
 
 
@@ -185,5 +192,62 @@ a{
 
     #projects-header{
         margin-top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    #navbar{
+        justify-content: center;
+        align-items: center;
+    }
+    #navbar h4{
+        display: none;
+    }
+    #navbar ul{
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    #navbar{
+        justify-content: center;
+    }
+
+    #navbar a{
+        text-decoration: underline;
+        text-decoration-color: var(--orange);
+    }
+
+    #about-img{
+        display: none;
+    }
+
+    #about-title{
+        font-size: 30px;
+    }
+
+    #about-text{
+        font-size: 15px;
+    }
+
+    #projects-header{
+        font-size: 30px;
+    }
+
+    .project-card{
+        height: 200px;
+    }
+
+    #footer h3{
+        font-size: 12px;
+    }
+
+    #profile-link, #linkedin{
+        width: 30px;
+    }
+
+    #footer div{
+        gap: 5px;
     }
 }
